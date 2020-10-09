@@ -1,0 +1,34 @@
+My Git aliases.
+
+    cd
+    open ~/.gitprofile
+
+
+Paste following: 
+
+[filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+[user]
+	email = {your_email}
+	name = {your_name}
+[alias]
+    a = add --all
+    co = checkout
+    cob = checkout -b
+    cm = commit -m
+    b = branch
+    l = log
+    st = status
+    p = push
+    fp = push -f
+    pl = pull
+    rb = rebase
+    rebdev = rebase develop
+    rebmas = rebase master
+    rebcon = rebase --continue
+    br = for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(color:red)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:relative)%(color:reset))'
+[core]
+    editor = open -W -n
