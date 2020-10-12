@@ -1,7 +1,7 @@
 My Git aliases.
 
     cd
-    open ~/.gitprofile
+    open ~/.gitconfig
 
 
 Paste following: 
@@ -16,11 +16,13 @@ Paste following:
 	name = {your_name}
 [alias]
     a = add --all
+    ac = !git add . && git commit -am
     co = checkout
     cob = checkout -b
     cm = commit -m
     b = branch
-    l = log
+    r = reset --hard HEAD
+    l = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
     st = status
     p = push
     fp = push -f
